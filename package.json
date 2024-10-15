@@ -1,0 +1,52 @@
+{
+  "name": "@y5anhao/eslint-config",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y5anhao/eslint-config.git"
+  },
+  "author": "y5anhao <yuanhaoloveslife@163.com>",
+  "scripts": {
+    "dev": "eslint-config-inspector --config eslint.config.ts",
+    "build": "pnpm run typegen && tsup",
+    "build:inspector": "eslint-config-inspector build --config eslint.config.ts",
+    "lint": "eslint --flag unstable_ts_config .",
+    "typegen": "tsx scripts/typegen.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "eslint": "^9.12.0"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
+    "@eslint/js": "^9.12.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "eslint-plugin-import-x": "^4.3.1",
+    "eslint-plugin-jsonc": "^2.16.0",
+    "eslint-plugin-perfectionist": "^3.8.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "eslint-plugin-vue": "^9.29.0",
+    "globals": "^15.11.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "typescript-eslint": "^8.8.1",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^0.5.4",
+    "@types/node": "^22.7.5",
+    "eslint": "^9.12.0",
+    "eslint-typegen": "^0.3.2",
+    "jiti": "^2.3.3",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
